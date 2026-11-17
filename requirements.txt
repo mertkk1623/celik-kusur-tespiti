@@ -1,0 +1,8 @@
+# Bu dosya bilinçli olarak boş bırakılmıştır.
+#
+# Paketler ve sürüm numaraları henüz belirlenmemiştir.
+# Kullanılacak kütüphaneler (ör. PyTorch, Ultralytics, Streamlit, veri işleme araçları)
+# ve sabitlenecek sürümler, ilgili geliştirme aşamasında (Aşama 1 / Aşama 2)
+# doğrulandıktan sonra bu dosyaya eklenecektir.
+#
+# Not: Bu aşamada paket kurulumu yapılmamıştır.

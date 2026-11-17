@@ -1,0 +1,20 @@
+# Veri seti (yerel, büyük dosyalar)
+data/
+
+# Eğitilmiş model ağırlıkları
+models/
+
+# Model ağırlık dosyaları
+*.pt
+
+# Python
+__pycache__/
+
+# Sanal ortam
+.venv/
+
+# Ortam değişkenleri
+.env
+
+# Jupyter
+.ipynb_checkpoints/
