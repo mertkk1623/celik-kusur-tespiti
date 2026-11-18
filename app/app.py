@@ -41,6 +41,12 @@ MODEL_PATH = PROJECT_ROOT / "models" / "best.pt"
 # Modelin eğitildiği görüntü boyutu. Eğitimle aynı tutulmalıdır.
 IMG_SIZE = 640
 
+# Projenin kaynak kodu. AGPL-3.0'ın 13. maddesi, ağ üzerinden sunulan
+# değiştirilmiş sürümlerde kullanıcıya kaynağa erişim imkânı verilmesini
+# istediği için arayüzde bu bağlantı gösterilir.
+SOURCE_URL = "https://github.com/mertkk1623/celik-kusur-tespiti"
+SOURCE_LABEL = "mertkk1623/celik-kusur-tespiti"
+
 # Eğitimde kullanılan sınıf sırası (Aşama 2 / Aşama 3 ile birebir aynı).
 EXPECTED_CLASS_NAMES = (
     "crazing",
@@ -814,6 +820,14 @@ h1, h2, h3, h4, h5, h6 { color: var(--text-primary); }
   color: var(--text-faint);
 }
 .footer-note strong { color: var(--text-muted); }
+.footer-note a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(56, 189, 248, 0.32);
+}
+.footer-note a:hover {
+  border-bottom-color: var(--accent);
+}
 
 /* ===========================================================================
    2.16 Duyarlı yerleşim
@@ -1474,7 +1488,7 @@ def render_howto():
 
 
 def render_footer():
-    """Teknik sorumluluk reddi notunu çizer."""
+    """Teknik sorumluluk reddi notunu ve kaynak kodu bağlantısını çizer."""
     st.markdown(
         '<div class="footer-note">'
         "<strong>Teknik not.</strong> Bu arayüz bir mühendislik demosudur ve "
@@ -1483,6 +1497,10 @@ def render_footer():
         "kusur ise gerçek olabilir. Üretim hattında otomatik kalite kararı "
         "vermek için ek doğrulama, kalibrasyon ve sınıf bazlı eşik stratejisi "
         "gerekir. Sonuçlar bu oturum dışında saklanmaz."
+        "<br>"
+        f'Kaynak kodu: <a href="{SOURCE_URL}" target="_blank" '
+        f'rel="noopener noreferrer">{SOURCE_LABEL}</a> · '
+        "AGPL-3.0 ile lisanslanmıştır."
         "</div>",
         unsafe_allow_html=True,
     )
