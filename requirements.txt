@@ -1,8 +1,16 @@
-# Bu dosya bilinçli olarak boş bırakılmıştır.
+# Çelik Yüzey Kusuru Tespiti – V1 bağımlılıkları
 #
-# Paketler ve sürüm numaraları henüz belirlenmemiştir.
-# Kullanılacak kütüphaneler (ör. PyTorch, Ultralytics, Streamlit, veri işleme araçları)
-# ve sabitlenecek sürümler, ilgili geliştirme aşamasında (Aşama 1 / Aşama 2)
-# doğrulandıktan sonra bu dosyaya eklenecektir.
+# Not: torch ve diğer alt bağımlılıklar burada ayrıca listelenmez.
+# Ultralytics kurulurken kendi bağımlılık çözümlemesiyle birlikte gelir.
+# Böylece sürüm çakışması riski azalır ve eğitim ortamıyla uyum korunur.
 #
-# Not: Bu aşamada paket kurulumu yapılmamıştır.
+# Sürümler bilinçli olarak sabitlendi:
+#   ultralytics 8.4.215 : YOLO26 ailesini (yolo26n.pt) destekleyen seri.
+#                         Eğitimde kullanılan sürüm değiştirilmemelidir.
+#   streamlit 1.67.0    : Arayüzün geliştirildiği ve doğrulandığı sürüm.
+#                         Tema CSS'i bu sürümün DOM yapısına göre yazıldı.
+
+streamlit==1.67.0
+ultralytics==8.4.215
+Pillow
+numpy
